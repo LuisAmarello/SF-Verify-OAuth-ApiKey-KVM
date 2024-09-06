@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SharedFlow name="default">
+    <Step>
+        <Name>CORS</Name>
+    </Step>
+    <Step>
+        <Name>OAuth-v2</Name>
+    </Step>
+    <Step>
+        <Condition>oauthV2.OAuth-v2.failed != true</Condition>
+        <Name>Verify-API-Key</Name>
+    </Step>
+    <Step>
+        <Condition>oauthV2.OAuth-v2.failed = true</Condition>
+        <Name>AM-Set-Error-Status-Code-Variable</Name>
+    </Step>
+    <Step>
+        <Condition>oauthV2.OAuth-v2.failed = true</Condition>
+        <Name>RF-Invalid-Access-Token</Name>
+    </Step>
+    <Step>
+        <Name>AM-Remove-Authorization-Header</Name>
+    </Step>
+    <Step>
+        <Name>KVM-GetKeys</Name>
+    </Step>
+    <Step>
+        <Name>AM-Set-Variables</Name>
+    </Step>
+</SharedFlow>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage continueOnError="false" enabled="true" name="AM-Set-Variables">
+    <DisplayName>AM-Set-Variables</DisplayName>
+    <Properties/>
+    <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+    <AssignVariable>
+        <Name>audience</Name>
+        <Template>{verifyapikey.Verify-API-Key.apiproduct.flow.product.audience}</Template>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>subject</Name>
+        <Template>{verifyapikey.Verify-API-Key.apiproduct.flow.product.subject}</Template>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>custom_claim</Name>
+        <Template>{verifyapikey.Verify-API-Key.apiproduct.flow.product.claim}</Template>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>iss</Name>
+        <Template>https://{organization.name}</Template>
+    </AssignVariable>
+</AssignMessage>
